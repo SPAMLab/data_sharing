@@ -2,7 +2,7 @@ import tensorflow as tf
 from tensorflow import keras
 
 
-def Unet_Original(input_size=(32, 32, 5)):
+def unet_Original(input_size=(32, 32, 5)):
     filtersFirstLayer = 32
     inputs = tf.keras.layers.Input(input_size)
     conv1 = tf.keras.layers.Conv2D(filtersFirstLayer, 3, activation='relu', padding='same', kernel_initializer='glorot_normal')(inputs)
@@ -137,7 +137,7 @@ def bottleneck(inputs):
 
 def decoder_block(inputs, conv_output, n_filters=64, kernel_size=3, strides=3, dropout=0.3):
     """
-    Bloco decoder da rede Unet.
+    Bloco decoder da rede unet.
 
     :param inputs: (tf.tensor) tensor de entrada.
     :param conv_output: (tf.tensor) tensor obtido no caminho encoder que será concatenado.
@@ -160,7 +160,7 @@ def decoder_block(inputs, conv_output, n_filters=64, kernel_size=3, strides=3, d
 
 def decoder(inputs, convs, output_channels, activation="sigmoid"):
     """
-    Etapa decoder Unet
+    Etapa decoder unet
 
     :param inputs: (tf.tensor) tensor de entrada
     :param convs: (tuple(tf.tensor)) tupla contendo os tensores da etapa encoder
@@ -188,7 +188,7 @@ def unet(input_shape = (128,128,6), output_channels=1, activation="sigmoid"):
     :param input_shape: (tuple) dimensção do layer de entrada. default = (128,128,3).
     :param output_channels:(int) Número de canais de output
     :param activation: (string) função de ativação.
-    :return: (tf.keras.models.Model) arquitetura de rede Unet.
+    :return: (tf.keras.models.Model) arquitetura de rede unet.
     """
 
     # definir a dimensão da camada de input
@@ -272,7 +272,7 @@ def upsample_concat_block(filters,x, xskip):
     return c
 
 
-def resUnet(image_size=(128,128,5)):
+def resunet(image_size=(128,128,5)):
   inputs = keras.layers.Input(image_size)
 
   conv1 = keras.layers.Conv2D(64, kernel_size=(3, 3), padding='same')(inputs)

@@ -59,11 +59,11 @@ class BestOverallResult:
         self.better_results = {"size":[],"path":[], "f1":[], "area":[]}
         for size in sizes:
             self.model1Result[size] = self._get_data_path(path=area1ResultPath, _size=size)
-            self.model1Result[size].extend(self._get_data_path(path=area1ResultPath, _size=size, network="unetOriginal"))
+            self.model1Result[size].extend(self._get_data_path(path=area1ResultPath, _size=size, network="unet"))
             self.model1Result[size].extend(self._get_data_path(path=area2ResultPath, _size=size))
-            self.model1Result[size].extend(self._get_data_path(path=area2ResultPath, _size=size, network="unetOriginal"))
+            self.model1Result[size].extend(self._get_data_path(path=area2ResultPath, _size=size, network="unet"))
             self.model1Result[size].extend(self._get_data_path(path=area3ResultPath, _size=size))
-            self.model1Result[size].extend(self._get_data_path(path=area3ResultPath, _size=size, network="unetOriginal"))
+            self.model1Result[size].extend(self._get_data_path(path=area3ResultPath, _size=size, network="unet"))
 
 
     def get_best_overall_result_of_each_test_area(self):
@@ -118,11 +118,11 @@ class Results:
         self.sizes = sizes
         for size in sizes:
             self.model1[size] = self._get_data_path(path=resultPath, _size=size)
-            self.model1[size].extend(self._get_data_path(path=resultPath, _size=size, network="unetOriginal"))
+            self.model1[size].extend(self._get_data_path(path=resultPath, _size=size, network="unet"))
             self.model2[size] = self._get_data_path(path=resultPath1, _size=size)
-            self.model2[size].extend(self._get_data_path(path=resultPath1, _size=size, network="unetOriginal"))
+            self.model2[size].extend(self._get_data_path(path=resultPath1, _size=size, network="unet"))
             self.model3[size] = self._get_data_path(path=resultPath2, _size=size)
-            self.model3[size].extend(self._get_data_path(path=resultPath2, _size=size, network="unetOriginal"))
+            self.model3[size].extend(self._get_data_path(path=resultPath2, _size=size, network="unet"))
 
     @staticmethod
     def _get_data_path(path, _size, network="unet"):
@@ -265,7 +265,7 @@ ImageMetrics("../art_results/best_results/5_bands_regular/128/unet_1e-05_32_test
              "../5_bands_regular/test1/test_area_1_mask.tif",
              "../art_results/best_results/metrics").calculate_TP_FP_FN(1)
 
-ImageMetrics("../art_results/best_results/5_bands_ndvi_regular/64/unetOriginal_1e-05_8_test2.tif",
+ImageMetrics("../art_results/best_results/5_bands_ndvi_regular/64/unet_1e-05_8_test2.tif",
              "../5_bands_regular/test2/test_area_2_mask.tif",
              "../art_results/best_results/metrics").calculate_TP_FP_FN(2)
 
