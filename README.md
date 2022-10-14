@@ -8,3 +8,5 @@ Final paper published in Remote Sensing. DOI: https://doi.org/10.3390/rs14092237
 Preprint available in ArXiv. DOI: https://doi.org/10.48550/arXiv.2007.06672  
 
 3 - Code for Paper - Relict landslide detection in rainforest areas using a combination of k-means clustering algorithm and Deep-Learning semantic segmentation models ([Link to repo](https://github.com/SPAMLab/data_sharing/tree/main/Relict_landslides_CNN_kmeans))
+
+4 - Data for Paper - Remotely Piloted Aircraft‐based automated vertical surface survey ([Link to repo](https://github.com/SPAMLab/jd-garcia-quarry))
