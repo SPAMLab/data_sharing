@@ -1,3 +1,7 @@
-# Landslide Segmentation with Deep Learning: Evaluating Model Generalization in Rainfall-Induced Landslides in Brazil
+# data_sharing
 
+All data in this repository was moved to Codeberg  
 
+Plase find it at: [https://codeberg.org/SPAMLab_USP/data_sharing](https://codeberg.org/SPAMLab_USP/data_sharing)  
+
+Thank you  
